@@ -58,7 +58,7 @@ app.use((req,res,next)=>{
 const {ensureAuthenticated,ensureGuest} = require('./helpers/auth');
 app.get('/',(req,res)=>{
 	console.log(req.user);
-	res.render('index');
+	res.json('index');
 })
 app.get('/profile/:userid',(req,res)=>{
 	const id = req.params.userid;
