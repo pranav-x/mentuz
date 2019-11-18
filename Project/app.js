@@ -204,6 +204,6 @@ app.use('/article', article);
 
 app.use('/auth',auth);
 
-app.listen(process.env.PORT || 49157,() => {
+app.listen(process.env.PORT || 3000,() => {
     console.log("startup");
 });
