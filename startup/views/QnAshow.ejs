@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="/stylesheet/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+<script src="https://kit.fontawesome.com/f424d53df2.js"></script>
+<meta charset='utf-8' />
+<title>XYZ</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<style>
+	.topmarg{
+		margin-top:100px;
+	}
+	</style>
+</head>
+<body>
+  
+
+	<div class="container topmarg">
+		
+		<div class="row">
+  <div class="col s12 m8">
+    <h3><%= data[0].title %>
+      
+    </h3>
+    <div class="card story">
+      <div class="card-content">
+        
+        <%- data[0].body %>
+      </div>
+    </div>
+	  
+   
+    
+       <% for(let i =0;i < comms.length; i++){ %>
+        <div class="card">
+          <div class="card-content">
+            <h5><%= comms[i].comment %></h5>
+            <div class="chip">
+            <img src="<%= comms[i].picture %>" alt="Contact Person">
+             <a href="#"> <%= comms[i].name %></a>
+              
+          </div>
+          <br>
+          <!-- <small>Posted: {{formatDate commentDate 'MMMM Do YYYY'}}</small> -->
+          </div>
+        </div>
+      <% } %>
+	    <div class="card">
+        <div class="card-content">
+          <span class="card-title">Comments</span>
+          <%if(userr) { %>
+            <form method="POST" action="/QnA/comment/<%- data[0].qnid %>/<%- userr[0].userid %>">
+            <div class="input-field">
+              <textarea name="commentBody"  class="materialize-textarea"></textarea>
+              <label>Add comments</label>
+            </div>
+            <input type="submit" value="Submit" class="btn">
+            </form>
+          <%}else{%>
+            <p>Please <a href="/auth/google">log in</a>  to leave comments</p>
+          <%} %>
+        </div>
+      </div>
+   
+  </div>
+			
+  <div class="col s12 m4">
+    <div class="card center-align">
+      <div class="card-content">
+        <span class="card-title"><%- data[0].name %></span>
+        <img src="<%- data[0].picture %>" alt="not available" class="circle responsive-img">
+      </div>
+      <div class="card-action">
+        <a href="/profile/<%- data[0].userid %>">More from <%- data[0].name %></a>
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+
+
+   <!-- footer -->
+  <footer class="bg-dark px-5">
+    <div class="container-fluid">
+      <div class="row text-light py-4">
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">About Us</h5>
+          <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nobis dicta molestiae id laboriosam natus repudiandae, ducimus illum veritatis perspiciatis possimus, at facere debitis accusantium?</p>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Visit Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link">Home</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Mission</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Collection</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Customers</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Need Help?</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link text-uppercase">Customer Service</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Online Chat</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Support</a>
+            </li>
+            <li>
+              <a href="#" class="text-info">photox@email.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Stay Connected</h5>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus dolores iste praesentium assumenda est quia accusantium corrupti ipsam inventore.</p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email Address">
+              <div class="input-group-append">
+                <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">Sign Up</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-inline">
+            <li class="list-inline-item"><i class="fab fa-facebook-square fa-2x text-primary"></i></li>
+            <li class="list-inline-item"><i class="fab fa-google-plus fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-instagram fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-twitter fa-2x text-info"></i></li>
+            <li class="list-inline-item"><i class="fab fa-youtube fa-2x text-danger"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center text-light border-top pt-3">
+          <p>&copy; 2018 Copyright, All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+	
+	   <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+
+     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+           <script src="/stylesheet/script.js"></script>
+</body>
+</html>

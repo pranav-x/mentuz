@@ -1,0 +1,8 @@
+Redirect /index.html /startup/views/index1.html
+
+RewriteEngine On
+
+RewriteRule ^/startup$ http://127.0.0.1:49157/ [P,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/startup/(.*)$ http://127.0.0.1:49157/$1 [P,L]

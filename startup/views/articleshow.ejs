@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="/css/style.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>XYZ</title>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="row">
+  <div class="col s12 m8">
+    <h3><%= data[0].title %>
+      
+    </h3>
+    <div class="card story">
+      <div class="card-content">
+        
+        <%- data[0].body %>
+      </div>
+    </div>
+	  
+	    <div class="card">
+        <div class="card-content">
+          <span class="card-title">Comments</span>
+          <%if(userr) { %>
+            <form method="POST" action="/article/comment/<%- data[0].aid %>/<%- userr[0].userid %>">
+            <div class="input-field">
+              <textarea name="commentBody"  class="materialize-textarea"></textarea>
+              <label>Add comments</label>
+            </div>
+            <input type="submit" value="Submit" class="btn">
+            </form>
+          <%}else{%>
+            <p>Please <a href="/auth/google">log in</a>  to leave comments</p>
+          <%} %>
+        </div>
+      </div>
+   
+  </div>
+			
+  <div class="col s12 m4">
+    <div class="card center-align">
+      <div class="card-content">
+        <span class="card-title"><%- data[0].name %></span>
+        <img src="<%- data[0].picture %>" alt="not available" class="circle responsive-img">
+      </div>
+      <div class="card-action">
+        <a href="/QnA/user/<%- data[0].userid %>">More from <%- data[0].name %></a>
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+
+  <script>
+    
+  </script>
+
+</body>
+</html>

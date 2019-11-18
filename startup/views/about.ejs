@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="/stylesheet/style.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+ 
+<script src="https://kit.fontawesome.com/f424d53df2.js"></script>
+<meta charset='utf-8' />
+<title>XYZ</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+			  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+ -->
+	<style>
+	.topmarg{
+		margin-top:100px;
+	}
+	</style>
+ 
+</head>
+<body>
+	<heer>
+	 <nav class="navbar navbar-expand-xl fixed-top nav-menu container-fluid">
+      <a href="#" class="navbar-brand text-light text-uppercase"><span class="h2 font-weight-bold">photo</span><span class="h1">X</span></a>
+      <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="bg-light line1"></div>
+        <div class="bg-light line2"></div>
+        <div class="bg-light line3"></div>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/index" class="nav-link m-2 menu-item nav-active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pdf2" class="nav-link m-2 menu-item">Notes</a>
+          </li>
+			
+          <li class="nav-item">
+            <a href="/testi" class="nav-link m-2 menu-item">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="/QnA" class="nav-link m-2 menu-item">QnA</a>
+          </li>
+			<% if(userr){ %>
+          <li class="nav-item">
+            <a href="/profile/<%- userr[0].userid %>" class="nav-link m-2 menu-item"><%= userr[0].name %></a>
+          </li>
+			<% } %>
+			<% if(userr){ %>
+			<li class="nav-item">
+            <a href="/logout" class="nav-link m-2 menu-item">Logout</a>
+          </li>
+			
+			<% } else { %>
+			<li class="nav-item">
+            <a href="/auth/google" class="nav-link m-2 menu-item">Login</a>
+          </li>
+			<% } %>
+		
+			<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle m-2 menu-item" href="#" role="button" data-toggle="dropdown" >
+          Dropdown
+        </a>
+        <div class="dropdown-menu nav-item" style="background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));" >
+          <a class=" nav-link menu-item" href="#">Action</a>
+          <a class=" nav-link  menu-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class=" nav-link menu-item"  href="#">Something else here</a>
+        </div>
+      </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item">Contact</a>
+          </li>
+			
+        </ul>
+      </div>
+    </nav>
+		</heer> 
+	 <!-- footer -->
+	
+ 
+<br>
+  <main role="main" class="container topmarg">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+       Mentuz
+      </h3>
+		<p class="small thee"><h5>
+			  <br>
+
+			  </h5>
+	  <br>
+
+      <div class="blog-post">
+        <h4 class="blog-post-title bg-black" >Founded on</h4>
+        <p class="blog-post-meta">February, 2019 by <a href="#">group of Students</a></p>
+			<hr>
+        <p>
+      
+      <br>
+    <ol>
+         <li>
+                Build and maintain the national database of students who believe in importance of truth and can dare to speak it!     
+         </li>
+      <li>
+        Unite like minded student in campuses in an effort to increase impact and activism collaboration 
+         </li>
+      <li>
+        Educate and tell students about the importance of historical truth and integrity and consequences of ignoring and concealing it through students driven reading clubs and face to face conversations.
+      </li>
+      <li>
+        Effectively push back against intolerance, antipathy and biasedness against the truth in our education system. We empower and train students with facts who joins the movement and become defenders of truth in their Campuses.
+      </li>
+      </ol>
+        </div><!-- /.blog-post -->
+		<br>
+      
+	  
+
+
+    </div><!-- /.blog-main -->
+
+	
+	 <aside class="col-md-4 blog-sidebar">
+   
+
+      <div class="p-4">
+        <h4 class="font-italic">Elsewhere</h4>
+        <ol class="list-unstyled">
+		  <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Twitter</a></li>
+			  <li><a href="">Mail us</a></li>
+
+          
+        </ol>
+      </div>
+		
+		 <div class="p-4">
+        <h5>Linking here does not mean that we agree with anything or everything posted on these websites or with their editorial or other policies, or views expressed thereon, nor we are responsible in anyway for the content on these websites.
+		</h5>
+			 <br>
+        <ol class="list-unstyled">
+          <li><a href="" target="blank"></a></li>
+		  <li><a href="" target="blank"></a></li>
+          <li><a href="" target="blank"></a></li>
+
+          
+        </ol>
+      </div>
+		
+    </aside><!-- /.blog-sidebar --> 
+</div>
+	</main>
+
+
+
+	
+  <footer class="bg-dark px-5">
+    <div class="container-fluid">
+      <div class="row text-light py-4">
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">About Us</h5>
+          <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nobis dicta molestiae id laboriosam natus repudiandae, ducimus illum veritatis perspiciatis possimus, at facere debitis accusantium?</p>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Visit Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link">Home</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Mission</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Collection</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Customers</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Need Help?</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link text-uppercase">Customer Service</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Online Chat</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Support</a>
+            </li>
+            <li>
+              <a href="#" class="text-info">photox@email.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Stay Connected</h5>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus dolores iste praesentium assumenda est quia accusantium corrupti ipsam inventore.</p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email Address">
+              <div class="input-group-append">
+                <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">Sign Up</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-inline">
+            <li class="list-inline-item"><i class="fab fa-facebook-square fa-2x text-primary"></i></li>
+            <li class="list-inline-item"><i class="fab fa-google-plus fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-instagram fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-twitter fa-2x text-info"></i></li>
+            <li class="list-inline-item"><i class="fab fa-youtube fa-2x text-danger"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center text-light border-top pt-3">
+          <p>&copy; 2018 Copyright, All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+	
+
+  <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+ <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+           <script src="/stylesheet/script.js"></script>
+  <script>
+   
+
+    CKEDITOR.replace('body',{
+      plugins: 'wysiwygarea,toolbar,basicstyles,link'
+    });
+    
+  </script>
+
+

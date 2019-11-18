@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="/stylesheet/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+ 
+<script src="https://kit.fontawesome.com/f424d53df2.js"></script>
+<meta charset='utf-8' />
+<title>XYZ</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+	<style type="text/css">
+        body{
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7));
+        }
+		.topmarg{
+			margin-top: 120px;
+		}
+        .topmar{
+          margin-bottom:20px;
+          margin-top:8px;
+        }
+    </style>
+</head>
+<body>
+  
+  <!-- header -->
+  
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-xl fixed-top nav-menu container-fluid">
+      <a href="#" class="navbar-brand text-light text-uppercase"><span class="h2 font-weight-bold">photo</span><span class="h1">X</span></a>
+      <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="bg-light line1"></div>
+        <div class="bg-light line2"></div>
+        <div class="bg-light line3"></div>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/" class="nav-link m-2 menu-item nav-active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pdf2" class="nav-link m-2 menu-item">Notes</a>
+          </li>
+			
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item">Customers</a>
+          </li>
+         <% if(userr){ %>
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item"><%= userr[0].name %></a>
+          </li>
+			<% } %>
+			<% if(userr){ %>
+			<li class="nav-item">
+            <a href="/logout" class="nav-link m-2 menu-item">Logout</a>
+          </li>
+			
+			<% } else { %>
+			<li class="nav-item">
+            <a href="/auth/google" class="nav-link m-2 menu-item">Login</a>
+          </li>
+			<% } %>
+			<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle m-2 menu-item" href="#" role="button" data-toggle="dropdown" >
+          Dropdown
+        </a>
+        <div class="dropdown-menu nav-item" style="background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));" >
+          <a class=" nav-link menu-item" href="#">Action</a>
+          <a class=" nav-link  menu-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class=" nav-link menu-item"  href="#">Something else here</a>
+        </div>
+      </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item">Contact</a>
+          </li>
+			
+        </ul>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- banner -->
+   
+    <!-- end of banner -->
+  <!-- end of header -->
+
+	
+<%if(tag=='AS'){ %>
+<div class="text-center container " style="margin-top:100px;" >
+        <div class="row pt-5  text-white" >
+                <div class="col-lg-6 offset-lg-3">
+                     <p class="pera1" style="text-align: justify; letter-spacing: .5px; ">
+                        We have the notes of  subjects of first year here along with the PDFs of prescribed books.
+                     </p>  
+                </div>
+        </div>
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card" style="">
+                    <img class="card-img-top " src="chem3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">CHEMISTRY</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1mJ2KGhteF7lrTb117g-QJPwwpU4eGqKH" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061139/pexels-photo-1061139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">PHYSICS</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1CdAW9rkopgS9Bd5ALGlCzB1ysSH7quQa" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061138/pexels-photo-1061138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">ELECTRICAL</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1qNIblN9--cG1t5pZazpi5VZgPKdJlOKT" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061137/pexels-photo-1061137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">CIVIL</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Zv8cCKclUdUsgFUmHaaGz75CFksfU_8S" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <!--second row!-->
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061136/pexels-photo-1061136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">ITBS</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1zdpYNNYvFm6DQcmYxTNtFiB21dUd_ey8" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061135/pexels-photo-1061135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">MECHANICAL</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Q05raLq8ogu68FLIn6dycH0LLN9Dl0ub" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="electro.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">ELECTRONICS</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1-KmM6-vv7STAJ5NC9FWkVlP9tfzCIvn8" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="math.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">MATHS</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1mgBXI9FlQB2vDGM-VVuthqGlGexZCp6Y" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+</div>
+	<% } %>
+
+	
+	
+	
+		
+<%if(tag=='Computer'){ %>
+<div class="text-center container" style="margin-top:100px;" >
+        <div class="row pt-5" >
+                <div class="col-lg-6 offset-lg-3">
+                     <p class="pera1" style="margin-top:100x; text-align: justify; letter-spacing: .5px; ">
+                        We have the notes of  subjects of first year here along with the PDFs of prescribed books.
+                     </p>  
+                </div>
+        </div>
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card" style="">
+                    <img class="card-img-top " src="https://images.pexels.com/photos/1061140/pexels-photo-1061140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">3rd Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1mJ2KGhteF7lrTb117g-QJPwwpU4eGqKH" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061139/pexels-photo-1061139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">4th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1CdAW9rkopgS9Bd5ALGlCzB1ysSH7quQa" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061138/pexels-photo-1061138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">5th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1qNIblN9--cG1t5pZazpi5VZgPKdJlOKT" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061137/pexels-photo-1061137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">6th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Zv8cCKclUdUsgFUmHaaGz75CFksfU_8S" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <!--second row!-->
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061136/pexels-photo-1061136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">7th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1zdpYNNYvFm6DQcmYxTNtFiB21dUd_ey8" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061135/pexels-photo-1061135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">8th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Q05raLq8ogu68FLIn6dycH0LLN9Dl0ub" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                
+        </div>
+</div>
+	<% } %>
+
+	
+	
+	<%if(tag=='Electrical'){ %>
+<div class="text-center container" style="margin-top:100px;" >
+        <div class="row pt-5 text-white" >
+                <div class="col-lg-6 offset-lg-3">
+                     <p class="pera1" style="margin-top:100x; text-align: justify; letter-spacing: .5px; ">
+                        We have the notes of  subjects of first year here along with the PDFs of prescribed books.
+                     </p>  
+                </div>
+        </div>
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card" style="">
+                    <img class="card-img-top " src="https://images.pexels.com/photos/1061140/pexels-photo-1061140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">3rd Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1mJ2KGhteF7lrTb117g-QJPwwpU4eGqKH" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061139/pexels-photo-1061139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">4th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1CdAW9rkopgS9Bd5ALGlCzB1ysSH7quQa" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061138/pexels-photo-1061138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">5th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1qNIblN9--cG1t5pZazpi5VZgPKdJlOKT" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061137/pexels-photo-1061137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">6th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Zv8cCKclUdUsgFUmHaaGz75CFksfU_8S" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <!--second row!-->
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061136/pexels-photo-1061136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">7th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1zdpYNNYvFm6DQcmYxTNtFiB21dUd_ey8" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061135/pexels-photo-1061135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">8th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Q05raLq8ogu68FLIn6dycH0LLN9Dl0ub" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                
+        </div>
+</div>
+	<% } %>
+
+	
+	
+	
+	<%if(tag=='Electronics'){ %>
+<div class="text-center container" style="margin-top:100px;" >
+        <div class="row pt-5 text-white" >
+                <div class="col-lg-6 offset-lg-3">
+                     <p class="pera1" style="margin-top:100x; text-align: justify; letter-spacing: .5px; ">
+                        We have the notes of  subjects of first year here along with the PDFs of prescribed books.
+                     </p>  
+                </div>
+        </div>
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card" style="">
+                    <img class="card-img-top " src="https://images.pexels.com/photos/1061140/pexels-photo-1061140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">3rd Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1mJ2KGhteF7lrTb117g-QJPwwpU4eGqKH" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061139/pexels-photo-1061139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">4th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1CdAW9rkopgS9Bd5ALGlCzB1ysSH7quQa" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061138/pexels-photo-1061138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">5th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1qNIblN9--cG1t5pZazpi5VZgPKdJlOKT" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061137/pexels-photo-1061137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">6th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Zv8cCKclUdUsgFUmHaaGz75CFksfU_8S" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <!--second row!-->
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061136/pexels-photo-1061136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">7th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1zdpYNNYvFm6DQcmYxTNtFiB21dUd_ey8" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061135/pexels-photo-1061135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">8th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Q05raLq8ogu68FLIn6dycH0LLN9Dl0ub" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                
+        </div>
+</div>
+	<% } %>
+
+	
+	
+	
+	
+	<%if(tag=='Mechanical'){ %>
+<div class="text-center container" style="margin-top:100px;" >
+        <div class="row pt-5 text-white" >
+                <div class="col-lg-6 offset-lg-3">
+                     <p class="pera1" style="margin-top:100x; text-align: justify; letter-spacing: .5px; ">
+                        We have the notes of  subjects of first year here along with the PDFs of prescribed books.
+                     </p>  
+                </div>
+        </div>
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card" style="">
+                    <img class="card-img-top " src="https://images.pexels.com/photos/1061140/pexels-photo-1061140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">3rd Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1mJ2KGhteF7lrTb117g-QJPwwpU4eGqKH" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061139/pexels-photo-1061139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">4th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1CdAW9rkopgS9Bd5ALGlCzB1ysSH7quQa" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061138/pexels-photo-1061138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">5th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1qNIblN9--cG1t5pZazpi5VZgPKdJlOKT" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061137/pexels-photo-1061137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">6th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Zv8cCKclUdUsgFUmHaaGz75CFksfU_8S" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <!--second row!-->
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061136/pexels-photo-1061136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">7th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1zdpYNNYvFm6DQcmYxTNtFiB21dUd_ey8" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061135/pexels-photo-1061135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">8th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Q05raLq8ogu68FLIn6dycH0LLN9Dl0ub" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                
+        </div>
+</div>
+	<% } %>
+
+	
+	
+	
+	<%if(tag=='Civil'){ %>
+<div class="text-center container" style="margin-top:100px;" >
+        <div class="row pt-5 text-white" >
+                <div class="col-lg-6 offset-lg-3">
+                     <p class="pera1" style="margin-top:100x; text-align: justify; letter-spacing: .5px; ">
+                        We have the notes of  subjects of first year here along with the PDFs of prescribed books.
+                     </p>  
+                </div>
+        </div>
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card" style="">
+                    <img class="card-img-top " src="https://images.pexels.com/photos/1061140/pexels-photo-1061140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">3rd Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1mJ2KGhteF7lrTb117g-QJPwwpU4eGqKH" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061139/pexels-photo-1061139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">4th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1CdAW9rkopgS9Bd5ALGlCzB1ysSH7quQa" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061138/pexels-photo-1061138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">5th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1qNIblN9--cG1t5pZazpi5VZgPKdJlOKT" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061137/pexels-photo-1061137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">6th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Zv8cCKclUdUsgFUmHaaGz75CFksfU_8S" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <!--second row!-->
+        <div class="row pt-5">
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061136/pexels-photo-1061136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">7th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1zdpYNNYvFm6DQcmYxTNtFiB21dUd_ey8" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" style="margin-top: 20px;">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="https://images.pexels.com/photos/1061135/pexels-photo-1061135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 26px;">8th Sem</h4>
+                        <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>!-->
+                         <a href="https://drive.google.com/open?id=1Q05raLq8ogu68FLIn6dycH0LLN9Dl0ub" class="btn btn-success btn-block" style="font-size: 16px;">Read More</a>
+                    </div>
+                </div>
+                </div>
+                
+        </div>
+</div>
+	<% } %>
+
+	
+	
+	
+	  <!-- footer -->
+  <footer class="bg-dark px-5">
+    <div class="container-fluid">
+      <div class="row text-light py-4">
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">About Us</h5>
+          <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nobis dicta molestiae id laboriosam natus repudiandae, ducimus illum veritatis perspiciatis possimus, at facere debitis accusantium?</p>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Visit Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link">Home</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Mission</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Collection</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Customers</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Need Help?</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link text-uppercase">Customer Service</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Online Chat</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Support</a>
+            </li>
+            <li>
+              <a href="#" class="text-info">photox@email.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Stay Connected</h5>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus dolores iste praesentium assumenda est quia accusantium corrupti ipsam inventore.</p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email Address">
+              <div class="input-group-append">
+                <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">Sign Up</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-inline">
+            <li class="list-inline-item"><i class="fab fa-facebook-square fa-2x text-primary"></i></li>
+            <li class="list-inline-item"><i class="fab fa-google-plus fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-instagram fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-twitter fa-2x text-info"></i></li>
+            <li class="list-inline-item"><i class="fab fa-youtube fa-2x text-danger"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center text-light border-top pt-3">
+          <p>&copy; 2018 Copyright, All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+           <script src="/stylesheet/script.js"></script>
+</body>
+</html>
