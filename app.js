@@ -58,7 +58,7 @@ app.use((req,res,next)=>{
 const {ensureAuthenticated,ensureGuest} = require('./helpers/auth');
 app.get('/',(req,res)=>{
 	console.log(req.user);
-	res.json('index');
+	res.render("landing");
 })
 app.get('/profile/:userid',(req,res)=>{
 	const id = req.params.userid;
@@ -181,7 +181,7 @@ app.post('/QnA/comment/:id/:id2',(req,res)=>{
 	
 })
 app.get('/testi',(req, res)=>{
-	res.render("testimonial");
+	res.render("pdf2");
 })
 app.get('/about',(req, res)=>{
 	res.send("about");
